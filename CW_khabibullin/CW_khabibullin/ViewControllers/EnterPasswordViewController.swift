@@ -12,6 +12,8 @@ class EnterPasswordViewController: UIViewController, FlowController {
     
     var completionHandler: ((String?) -> ())?
     
+    // MARK: Private properties
+    
     private var newPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
@@ -38,6 +40,8 @@ class EnterPasswordViewController: UIViewController, FlowController {
     
     private var userData: UserData!
     
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -46,6 +50,8 @@ class EnterPasswordViewController: UIViewController, FlowController {
     func setup(userData: UserData) {
         self.userData = userData
     }
+    
+    // MARK: Private
     
     private func addSubviews() {
       
@@ -59,6 +65,8 @@ class EnterPasswordViewController: UIViewController, FlowController {
         
         view.addSubview(stackView)
     }
+    
+    // MARK: Objective methods
     
     @objc private func nextButtonTapped() {
         if self.newPasswordTextField.text == self.repeatPasswordTextField.text {

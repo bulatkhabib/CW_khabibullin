@@ -12,6 +12,8 @@ class EnterLoginViewController: UIViewController, FlowController {
     
     var completionHandler: ((String?) -> ())?
     
+    // MARK: Private properties
+    
     private var textField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
@@ -30,6 +32,8 @@ class EnterLoginViewController: UIViewController, FlowController {
     
     private var userData: UserData!
     
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -38,6 +42,8 @@ class EnterLoginViewController: UIViewController, FlowController {
     func setup(userData: UserData) {
         self.userData = userData
     }
+    
+    // MARK: Private
     
     private func addSubviews() {
         
@@ -51,6 +57,8 @@ class EnterLoginViewController: UIViewController, FlowController {
         
         view.addSubview(stackView)
     }
+    
+    // MARK: Objective method
     
     @objc private func nextButtonTapped() {
         if textField.text != nil {

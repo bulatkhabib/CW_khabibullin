@@ -14,6 +14,8 @@ class AuthViewController: UIViewController, FlowController {
     var completionHandlerMain: (() -> ())?
     var completionHandlerChangePassword: (() -> ())?
     
+    // MARK: Private properties
+    
     private var userData: UserData!
     
     private var nameTextField: UITextField = {
@@ -54,6 +56,8 @@ class AuthViewController: UIViewController, FlowController {
         return button
     }()
     
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -62,6 +66,8 @@ class AuthViewController: UIViewController, FlowController {
     func setup(userData: UserData) {
         self.userData = userData
     }
+    
+    // MARK: Private
     
     private func addSubviews() {
         
@@ -75,6 +81,8 @@ class AuthViewController: UIViewController, FlowController {
         
         view.addSubview(stackView)
     }
+    
+    // MARK: Objective methods
     
     @objc private func nextButtonTapped() {
         if nameTextField.text != nil && passwordTextField.text != "" {

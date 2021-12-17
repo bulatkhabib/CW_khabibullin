@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     
     var completionHandler: (() -> ())?
     
+    // MARK: Private properties
+    
     @Published private var userData = UserIncomingData()
     private var serviceSubscriber: AnyCancellable?
     
@@ -39,6 +41,8 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    // MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -46,6 +50,8 @@ class MainViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(refreshButtonTapped))
     }
+    
+    // MARK: Private
     
     private func loadData() {
         serviceSubscriber = NetworkService().publisher
@@ -70,6 +76,8 @@ class MainViewController: UIViewController {
         
         view.addSubview(stackView)
     }
+    
+    // MARK: Objective methods
     
     @objc private func logoutButtonTapped() {
         completionHandler!()
