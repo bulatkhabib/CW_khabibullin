@@ -13,6 +13,18 @@
 		9EB9181D276C899100DBC668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9181B276C899100DBC668 /* Main.storyboard */; };
 		9EB9181F276C899400DBC668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9181E276C899400DBC668 /* Assets.xcassets */; };
 		9EB91822276C899400DBC668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB91820276C899400DBC668 /* LaunchScreen.storyboard */; };
+		9EB9182B276C8ACF00DBC668 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9182A276C8ACF00DBC668 /* AuthViewController.swift */; };
+		9EB9182E276C8AFC00DBC668 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9182D276C8AFC00DBC668 /* UserData.swift */; };
+		9EB91830276C8BE100DBC668 /* EnterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9182F276C8BE100DBC668 /* EnterLoginViewController.swift */; };
+		9EB91832276C8C1B00DBC668 /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91831276C8C1B00DBC668 /* EnterPasswordViewController.swift */; };
+		9EB91834276C8E0500DBC668 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91833276C8E0500DBC668 /* MainViewController.swift */; };
+		9EB9183D276C967A00DBC668 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9183C276C967A00DBC668 /* ModuleFactory.swift */; };
+		9EB9183F276C968800DBC668 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9183E276C968800DBC668 /* CoordinatorFactory.swift */; };
+		9EB91842276C96CD00DBC668 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91841276C96CD00DBC668 /* AppCoordinator.swift */; };
+		9EB91844276C96E400DBC668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91843276C96E400DBC668 /* Coordinator.swift */; };
+		9EB91846276C984A00DBC668 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91845276C984A00DBC668 /* AuthCoordinator.swift */; };
+		9EB91848276C999D00DBC668 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91847276C999D00DBC668 /* FlowController.swift */; };
+		9EB9184E276CA62D00DBC668 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9184D276CA62D00DBC668 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		9EB9181E276C899400DBC668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EB91821276C899400DBC668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EB91823276C899400DBC668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB9182A276C8ACF00DBC668 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		9EB9182D276C8AFC00DBC668 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		9EB9182F276C8BE100DBC668 /* EnterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterLoginViewController.swift; sourceTree = "<group>"; };
+		9EB91831276C8C1B00DBC668 /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		9EB91833276C8E0500DBC668 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EB9183C276C967A00DBC668 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		9EB9183E276C968800DBC668 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		9EB91841276C96CD00DBC668 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9EB91843276C96E400DBC668 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9EB91845276C984A00DBC668 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		9EB91847276C999D00DBC668 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		9EB9184D276CA62D00DBC668 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,11 @@
 		9EB91814276C899100DBC668 /* CW_khabibullin */ = {
 			isa = PBXGroup;
 			children = (
+				9EB9184C276CA61B00DBC668 /* Service */,
+				9EB91840276C96C100DBC668 /* Coordinators */,
+				9EB9183B276C966C00DBC668 /* Factory */,
+				9EB9182C276C8AEF00DBC668 /* Model */,
+				9EB91829276C8A4600DBC668 /* ViewControllers */,
 				9EB91815276C899100DBC668 /* AppDelegate.swift */,
 				9EB91817276C899100DBC668 /* SceneDelegate.swift */,
 				9EB91819276C899100DBC668 /* ViewController.swift */,
@@ -65,6 +94,53 @@
 				9EB91823276C899400DBC668 /* Info.plist */,
 			);
 			path = CW_khabibullin;
+			sourceTree = "<group>";
+		};
+		9EB91829276C8A4600DBC668 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9182A276C8ACF00DBC668 /* AuthViewController.swift */,
+				9EB9182F276C8BE100DBC668 /* EnterLoginViewController.swift */,
+				9EB91831276C8C1B00DBC668 /* EnterPasswordViewController.swift */,
+				9EB91833276C8E0500DBC668 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9EB9182C276C8AEF00DBC668 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9182D276C8AFC00DBC668 /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EB9183B276C966C00DBC668 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9183C276C967A00DBC668 /* ModuleFactory.swift */,
+				9EB9183E276C968800DBC668 /* CoordinatorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		9EB91840276C96C100DBC668 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9EB91841276C96CD00DBC668 /* AppCoordinator.swift */,
+				9EB91843276C96E400DBC668 /* Coordinator.swift */,
+				9EB91845276C984A00DBC668 /* AuthCoordinator.swift */,
+				9EB91847276C999D00DBC668 /* FlowController.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9EB9184C276CA61B00DBC668 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9184D276CA62D00DBC668 /* NetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +214,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB91842276C96CD00DBC668 /* AppCoordinator.swift in Sources */,
+				9EB91846276C984A00DBC668 /* AuthCoordinator.swift in Sources */,
+				9EB9182B276C8ACF00DBC668 /* AuthViewController.swift in Sources */,
+				9EB9183D276C967A00DBC668 /* ModuleFactory.swift in Sources */,
 				9EB9181A276C899100DBC668 /* ViewController.swift in Sources */,
 				9EB91816276C899100DBC668 /* AppDelegate.swift in Sources */,
+				9EB9182E276C8AFC00DBC668 /* UserData.swift in Sources */,
+				9EB91848276C999D00DBC668 /* FlowController.swift in Sources */,
 				9EB91818276C899100DBC668 /* SceneDelegate.swift in Sources */,
+				9EB91830276C8BE100DBC668 /* EnterLoginViewController.swift in Sources */,
+				9EB9184E276CA62D00DBC668 /* NetworkService.swift in Sources */,
+				9EB91844276C96E400DBC668 /* Coordinator.swift in Sources */,
+				9EB91832276C8C1B00DBC668 /* EnterPasswordViewController.swift in Sources */,
+				9EB91834276C8E0500DBC668 /* MainViewController.swift in Sources */,
+				9EB9183F276C968800DBC668 /* CoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
