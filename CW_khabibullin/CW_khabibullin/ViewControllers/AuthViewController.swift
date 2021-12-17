@@ -8,7 +8,11 @@
 import Foundation
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, FlowController {
+    
+    var completionHandler: ((String?) -> ())?
+    var completionHandlerMain: (() -> ())?
+    var completionHandlerChangePassword: (() -> ())?
     
     private var userData: UserData!
     
@@ -45,7 +49,7 @@ class AuthViewController: UIViewController {
         button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         button.setTitle("forgot password", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(forgotPasswordButtonTapped), for: .touchUpInside)
         
         return button
     }()
@@ -74,9 +78,13 @@ class AuthViewController: UIViewController {
     
     @objc private func nextButtonTapped() {
         if nameTextField.text != nil && passwordTextField.text != "" {
-            
+            completionHandlerMain!()
         } else {
             print("error")
         }
+    }
+    
+    @objc private func forgotPasswordButtonTapped() {
+        completionHandlerChangePassword!()
     }
 }

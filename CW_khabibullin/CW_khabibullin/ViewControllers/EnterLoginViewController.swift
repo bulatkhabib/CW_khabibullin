@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class EnterLoginViewController: UIViewController {
+class EnterLoginViewController: UIViewController, FlowController {
+    
+    var completionHandler: ((String?) -> ())?
     
     private var textField: UITextField = {
         let textField = UITextField()
@@ -52,7 +54,7 @@ class EnterLoginViewController: UIViewController {
     
     @objc private func nextButtonTapped() {
         if textField.text != nil {
-            
+            completionHandler!(textField.text)
         } else {
             print("error")
         }

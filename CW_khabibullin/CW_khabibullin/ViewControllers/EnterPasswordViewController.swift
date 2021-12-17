@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class EnterPasswordViewController: UIViewController {
+class EnterPasswordViewController: UIViewController, FlowController {
+    
+    var completionHandler: ((String?) -> ())?
     
     private var newPasswordTextField: UITextField = {
         let textField = UITextField()
@@ -59,8 +61,8 @@ class EnterPasswordViewController: UIViewController {
     }
     
     @objc private func nextButtonTapped() {
-        if self.newPasswordTextField.text != self.repeatPasswordTextField.text {
-    
+        if self.newPasswordTextField.text == self.repeatPasswordTextField.text {
+            completionHandler!(newPasswordTextField.text)
         } else {
             print("error")
         }
