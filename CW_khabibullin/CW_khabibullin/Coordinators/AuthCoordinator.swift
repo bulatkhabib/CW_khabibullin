@@ -41,6 +41,10 @@ class AuthCoordinator: Coordinator {
     private func showMainModule() {
         let controller = moduleFactory.createMainModule()
         navigationController.pushViewController(controller, animated: true)
+        
+        controller.completionHandler = {
+            self.navigationController.popToRootViewController(animated: true)
+        }
     }
     
     private func showEnterLoginModule() {

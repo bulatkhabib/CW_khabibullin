@@ -7,10 +7,14 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class MainViewController: UIViewController {
     
-    private var userData: UserData!
+    var completionHandler: (() -> ())?
+    
+    @Published private var userData = UserIncomingData()
+    private var serviceSubscriber: AnyCancellable?
     
     private var genderLabel: UILabel = {
         let label = UILabel()
@@ -38,27 +42,19 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
+        loadData()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(refreshButtonTapped))
     }
     
-    func setup(userData: UserData) {
-        self.userData = userData
-    }
-    
-    private func loadData(completion: @escaping (_ data: Any?, _ error: Error?) -> Void) {
-        if let url = URL(string: "https://randomuser.me/api") {
-            URLSession.shared.dataTask(with: url) { [self] data, response, error in
-                if let data = data {
-                    do {
-                        let res = try JSONDecoder().decode(UserData.self, from: data)
-                        genderLabel.text = "gender: \(res.gender)"
-                        firstNameLabel.text = "firstName: \(res.first)"
-                        lastNameLabel.text = "lastName: \(res.last)"
-                    } catch let error {
-                        print(error)
-                    }
-                }
-            }.resume()
-        }
+    private func loadData() {
+        serviceSubscriber = NetworkService().publisher
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { _ in }, receiveValue: { data in
+                self.genderLabel.text = data.results?.first?.gender
+                self.firstNameLabel.text = data.results?.first?.name?.first
+                self.lastNameLabel.text = data.results?.first?.name?.last
+            })
     }
     
     private func addSubviews() {
@@ -76,6 +72,10 @@ class MainViewController: UIViewController {
     }
     
     @objc private func logoutButtonTapped() {
-        
+        completionHandler!()
+    }
+    
+    @objc private func refreshButtonTapped() {
+        loadData()
     }
 }

@@ -24,6 +24,7 @@
 		9EB91844276C96E400DBC668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91843276C96E400DBC668 /* Coordinator.swift */; };
 		9EB91846276C984A00DBC668 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91845276C984A00DBC668 /* AuthCoordinator.swift */; };
 		9EB91848276C999D00DBC668 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB91847276C999D00DBC668 /* FlowController.swift */; };
+		9EB9184E276CA62D00DBC668 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9184D276CA62D00DBC668 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9EB91843276C96E400DBC668 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9EB91845276C984A00DBC668 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		9EB91847276C999D00DBC668 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		9EB9184D276CA62D00DBC668 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		9EB91814276C899100DBC668 /* CW_khabibullin */ = {
 			isa = PBXGroup;
 			children = (
+				9EB9184C276CA61B00DBC668 /* Service */,
 				9EB91840276C96C100DBC668 /* Coordinators */,
 				9EB9183B276C966C00DBC668 /* Factory */,
 				9EB9182C276C8AEF00DBC668 /* Model */,
@@ -130,6 +133,14 @@
 				9EB91847276C999D00DBC668 /* FlowController.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9EB9184C276CA61B00DBC668 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9184D276CA62D00DBC668 /* NetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				9EB91848276C999D00DBC668 /* FlowController.swift in Sources */,
 				9EB91818276C899100DBC668 /* SceneDelegate.swift in Sources */,
 				9EB91830276C8BE100DBC668 /* EnterLoginViewController.swift in Sources */,
+				9EB9184E276CA62D00DBC668 /* NetworkService.swift in Sources */,
 				9EB91844276C96E400DBC668 /* Coordinator.swift in Sources */,
 				9EB91832276C8C1B00DBC668 /* EnterPasswordViewController.swift in Sources */,
 				9EB91834276C8E0500DBC668 /* MainViewController.swift in Sources */,
